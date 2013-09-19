@@ -4,13 +4,8 @@
         <title>Hogan Tool</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-          <script src="../../assets/js/html5shiv.js"></script>
-          <script src="../../assets/js/respond.min.js"></script>
-        <![endif]-->
     </head>
     <body>
         <div class="navbar navbar-default">
@@ -50,18 +45,9 @@
             </div>
         </div>
         
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="http://code.jquery.com/jquery.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/hogan.js/2.0.0/hogan.js"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>    <script>
-            function generate(){
-                var hash = JSON.parse($("textarea#hash").val());
-                var template = Hogan.compile($("textarea#template").val());;
-                var result = template.render(hash)
-                $("textarea#result").val(result);
-            }
-        </script>
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/hogan.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/hogantool.js"></script>
     </body>
 </html>
