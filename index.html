@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/hogantool.css">
 
     </head>
     <body>
@@ -27,27 +28,49 @@
             </div>
         </div>
         <div class="container">
-            <!-- <form role="form"> -->
             <div class="row">
                 <div class="form-group col-md-6">
                     <label>Hash</label>
-                    <textarea id="hash" class="form-control" rows="15"></textarea>
+                    <div id="hash" class="form-control" rows="15">{
+  "header": "Colors",
+  "items": [
+      {"name": "red", "first": true, "url": "#Red"},
+      {"name": "green", "link": true, "url": "#Green"},
+      {"name": "blue", "link": true, "url": "#Blue"}
+  ],
+  "empty": false
+}</div>
                 </div>
                 <div class="form-group col-md-6">
                     <label>Template</label>
-                    <textarea id="template" class="form-control" rows="15"></textarea>
+                    <div id="template" class="form-control" rows="15">&lt;h1&gt;{{header}}&lt;/h1&gt;
+{{#bug}}
+{{/bug}}
+
+{{#items}}
+  {{#first}}
+    &lt;li&gt;&lt;strong&gt;{{name}}&lt;/strong&gt;&lt;/li&gt;
+  {{/first}}
+  {{#link}}
+    &lt;li&gt;&lt;a href=&quot;{{url}}&quot;&gt;{{name}}&lt;/a&gt;&lt;/li&gt;
+  {{/link}}
+{{/items}}
+
+{{#empty}}
+  &lt;p&gt;The list is empty.&lt;/p&gt;
+{{/empty}}</div>
                 </div>
-            <!-- </form> -->
             </div>
             <div class="form-group">
                 <label>Result</label>
-                <textarea id="result" class="form-control" rows="15"></textarea>
+                <div id="result" class="form-control" rows="15"></div>
             </div>
         </div>
         
         <script src="assets/js/jquery.js"></script>
         <script src="assets/js/hogan.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/hogantool.js"></script>
+        <script src="assets/js/ace/src-min/ace.js"></script>
+        <script src="assets/js/hogantool.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>
