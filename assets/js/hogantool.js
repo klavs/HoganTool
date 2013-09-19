@@ -15,6 +15,7 @@
     resultEditor.getSession().setUseWorker(false);
     resultEditor.setTheme("ace/theme/textmate");
     resultEditor.getSession().setMode("ace/mode/xml");
+    resultEditor.setShowPrintMargin(false);
     resultEditor.setReadOnly(true);
 
     function generate(){
